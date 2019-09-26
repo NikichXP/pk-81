@@ -27,7 +27,7 @@ class Main{
 
         System.out.println();
        
-        String data = "1k 2kK 3KkK 4Kkkk  0sssa 546asdadsa 3kkK 5KkkKK 6KkKkKk asbbbbbb1213 7KkkKKKK";
+        String data = "1k 2kK 3KkK 4Kkkk  0sssa 546asdadsa 3kkK 5KkkKK 6KkKkKk asbbbbbb1213 4kkkk 7KkkKKKK";
         System.out.println("String is: ");
         System.out.println(data);
         System.out.println();
@@ -68,6 +68,7 @@ class Main{
             int index = numbers.indexOf(a);
             sorted.add(wordsInData.get(index));
             numbers.remove(index);
+            wordsInData.remove(index);
             if(numbers.isEmpty() == true){
                 break;
             }

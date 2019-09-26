@@ -1,13 +1,13 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+// import java.io.File;
+// import java.io.FileNotFoundException;
+// import java.io.IOException;
+// import java.lang.reflect.Array;
+// import java.nio.file.Files;
+// import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collection;
+// import java.util.Collection;
 import java.util.Collections;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 class Main{
     public static void main(String[] args) {
@@ -35,9 +35,9 @@ class Main{
         // Must found
         char K = 'K';
         char k = 'k';
-        ArrayList sorted = new ArrayList<>();
+        ArrayList<String> sorted = new ArrayList<String>();
         ArrayList<Integer> numbers = new ArrayList<Integer>();
-        ArrayList wordsInData = new ArrayList<>();
+        ArrayList<String> wordsInData = new ArrayList<String>();
         int nums = 0;
         String[] words = data.split(" ");
 
@@ -63,16 +63,24 @@ class Main{
         // for(Object elem : numbers){
         //     System.out.println(elem);
         // }
-        while(true){
+        // while(true){
+        //     Integer a = Collections.max(numbers);
+        //     int index = numbers.indexOf(a);
+        //     sorted.add(wordsInData.get(index));
+        //     numbers.remove(index);
+        //     wordsInData.remove(index);
+        //     if(numbers.isEmpty() == true){
+        //         break;
+        //     }
+        // }
+        do{
             Integer a = Collections.max(numbers);
             int index = numbers.indexOf(a);
             sorted.add(wordsInData.get(index));
             numbers.remove(index);
             wordsInData.remove(index);
-            if(numbers.isEmpty() == true){
-                break;
-            }
-        }
+
+        }while(numbers.isEmpty() == false);
 
         for(Object elem : sorted){
             System.out.println(elem);
